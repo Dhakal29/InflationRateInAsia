@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">  	
+        <h2 class="heading">Asia Inflation Predict</h2>
+		<input type="checkbox" id="chk" aria-hidden="true">
+			<div class="signup">
+				<form action="{{url_for('predict')}}" method="post">
+					<input type="text" name="regionalmember" placeholder="Regional Member" required="">            
+					<input type="number" name="year" placeholder="Year" required="">
+					<input type="text" name="subregion" placeholder="Subregion" required="">
+					<input type="text" name="countrycode" placeholder="Country Code" required="">
+					<button type="Submit">Predict</button>
+				</form>
+                <p class="heading">Inflation is {{display_in_page_pred}} %</p>
+			</div>
+        </input>
+        
+        
+	</div>
+</body>
+
+
+</html>
